@@ -49,4 +49,15 @@ public class CashbackHackServiceTest {
 
     }
 
+    @org.testng.annotations.Test
+
+    public void testRemainWithMistake() {
+
+        int actual = service.remain(1000);
+        int expected = 0;
+
+        org.testng.Assert.assertEquals(actual, expected);
+
+    }
+
 }
