@@ -57,4 +57,60 @@ public class CashbackHackServiceTest {
 
     }
 
+    /////
+
+    @org.junit.jupiter.api.Test
+
+    public void testRemainOneJupiter() {
+
+        int actual = service.remain(400);
+        int expected = 600;
+
+        org.junit.jupiter.api.Assertions.assertEquals(actual, expected);
+
+    }
+
+    @org.junit.jupiter.api.Test
+
+    public void testRemainTwoJupiter() {
+
+        int actual = service.remain(0);
+        int expected = 1000;
+
+        org.junit.jupiter.api.Assertions.assertEquals(actual, expected);
+
+    }
+
+    @org.junit.jupiter.api.Test
+
+    public void testRemainThreeJupiter() {
+
+        int actual = service.remain(999);
+        int expected = 1;
+
+        org.junit.jupiter.api.Assertions.assertEquals(actual, expected);
+
+    }
+
+    @org.junit.jupiter.api.Test
+
+    public void testRemainFourJupiter() {
+
+        int actual = service.remain(1);
+        int expected = 999;
+
+        org.junit.jupiter.api.Assertions.assertEquals(actual, expected);
+
+    }
+    @org.junit.jupiter.api.Test
+
+    public void testRemainMistakeInServiceJupiter() {
+
+        int actual = service.remain(1000);
+        int expected = 0;
+
+        org.junit.jupiter.api.Assertions.assertEquals(actual, expected);
+
+    }
+
 }
